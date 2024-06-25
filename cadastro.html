@@ -7,21 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav >
+        <a href="editar.html"><button>editar curriculo</button></a>
+    </nav>
     <div class="container">
         <h1>Cadastro de currículo</h1>
         <form id="curriculoForm">
             <div class="upload-container">
-                <input type="file" id="fileInput" accept=".txt,.pdf">
+                <input type="file" id="fileInput" accept=".xml">
                 <label for="fileInput">Importe seu currículo Lattes: arraste para o retângulo</label>
             </div>
             <input type="text" id="nome" placeholder="Nome">
-            <input type="email" id="email" placeholder="Email">
-            <input type="text" id="endereco" placeholder="Endereço">
-            <textarea id="experiencia" placeholder="Adicionar experiência"></textarea>
+            <input type="text" id="pais" placeholder="País">
+            <div id="scholarResults"></div>
+            <input type="text" id="nomeEmCitacoes" placeholder="Nome nas citações">
             <textarea id="formacao" placeholder="Adicionar formação acadêmica"></textarea>
             <textarea id="idiomas" placeholder="Adicionar idiomas"></textarea>
-            <button type="submit">Cadastrar</button>
+            <button id="btnSalvarCurriculo">Cadastrar</button>
         </form>
+    </div>
+    <div class="containerproj">
+        <h1>Projetos de pesquisa</h1>
+        <button id="toggleProjetos">Mostrar Projetos</button>
+    <div id="projetos-container"></div>
+    </div>
+    <div class="containerproj1">
+        <h1>Artigos e citações</h1>
+        <button id="toggleArtigos">Mostrar Projetos</button>
+        <div id="artigos-container"></div>
     </div>
     <script src="cadastro.js"></script>
 </body>
